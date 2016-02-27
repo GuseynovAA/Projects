@@ -1,0 +1,17 @@
+X:\Ion\Ion.Core\Ion.Core\obj\x86\Debug\ResolveAssemblyReference.cache
+X:\Ion\Ion.Core\Ion.Core\bin\Debug\Ion.Core.pdb
+X:\Ion\Ion.Core\Ion.Core\obj\x86\Debug\Ion.Core.pdb
+X:\Ion\Ion.Core\Ion.Core\bin\Debug\Ion.Core.dll
+X:\Ion\Ion.Core\Ion.Core\obj\x86\Debug\Ion.Core.dll
+X:\Ion\bin\Ion.Core.dll
+X:\Ion\bin\Ion.Core.pdb
+X:\Projects\bin\Ion.Core.dll
+X:\Projects\bin\Ion.Core.pdb
+X:\Projects\Ion.Core\Ion.Core\obj\x86\Debug\Ion.Core.pdb
+X:\Projects\Ion.Core\Ion.Core\obj\x86\Debug\Ion.Core.csprojResolveAssemblyReference.cache
+X:\Projects\Ion.Core\Ion.Core\obj\x86\Debug\Ion.Core.exe
+C:\Bin\Ion.Core.exe
+C:\Bin\Ion.Core.pdb
+C:\Storage\Projects\Ion\Ion.Core\Ion.Core\obj\x86\Debug\Ion.Core.exe
+C:\Storage\Projects\Ion\Ion.Core\Ion.Core\obj\x86\Debug\Ion.Core.pdb
+C:\Storage\Projects\Ion\Ion.Core\Ion.Core\obj\x86\Debug\Ion.Core.csprojResolveAssemblyReference.cache

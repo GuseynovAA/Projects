@@ -1,0 +1,10 @@
+C:\Users\Alex\OneDrive\Projects\Temp\DXApplication3\DXApplication3\bin\Debug\DXApplication3.exe.config
+C:\Users\Alex\OneDrive\Projects\Temp\DXApplication3\DXApplication3\bin\Debug\DXApplication3.exe
+C:\Users\Alex\OneDrive\Projects\Temp\DXApplication3\DXApplication3\bin\Debug\DXApplication3.pdb
+C:\Users\Alex\OneDrive\Projects\Temp\DXApplication3\DXApplication3\obj\Debug\DXApplication3.csprojResolveAssemblyReference.cache
+C:\Users\Alex\OneDrive\Projects\Temp\DXApplication3\DXApplication3\obj\Debug\DXApplication3.Properties.Resources.resources
+C:\Users\Alex\OneDrive\Projects\Temp\DXApplication3\DXApplication3\obj\Debug\DXApplication3.RibbonForm1.resources
+C:\Users\Alex\OneDrive\Projects\Temp\DXApplication3\DXApplication3\obj\Debug\DXApplication3.csproj.GenerateResource.Cache
+C:\Users\Alex\OneDrive\Projects\Temp\DXApplication3\DXApplication3\obj\Debug\DXApplication3.exe.licenses
+C:\Users\Alex\OneDrive\Projects\Temp\DXApplication3\DXApplication3\obj\Debug\DXApplication3.exe
+C:\Users\Alex\OneDrive\Projects\Temp\DXApplication3\DXApplication3\obj\Debug\DXApplication3.pdb

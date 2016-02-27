@@ -1,0 +1,11 @@
+X:\Icsonets\Oxynet.Core\Oxynet.Core\bin\Debug\Oxynet.Core.dll
+X:\Icsonets\Oxynet.Core\Oxynet.Core\bin\Debug\Oxynet.Core.pdb
+X:\Icsonets\Oxynet.Core\Oxynet.Core\obj\Debug\ResolveAssemblyReference.cache
+X:\Icsonets\Oxynet.Core\Oxynet.Core\obj\Debug\Oxynet.Core.pdb
+X:\Icsonets\bin\Oxynet.Core.pdb
+X:\Icsonets\bin\Oxynet.Core.exe
+X:\Icsonets\Oxynet.Core\Oxynet.Core\obj\Debug\Oxynet.Core.exe
+X:\Ion\Oxynet.Core\Oxynet.Core\obj\Debug\Oxynet.Core.exe
+X:\Ion\Oxynet.Core\Oxynet.Core\obj\Debug\Oxynet.Core.pdb
+X:\Ion\Temp\Oxynet.Core\Oxynet.Core\obj\Debug\Oxynet.Core.exe
+X:\Ion\Temp\Oxynet.Core\Oxynet.Core\obj\Debug\Oxynet.Core.pdb

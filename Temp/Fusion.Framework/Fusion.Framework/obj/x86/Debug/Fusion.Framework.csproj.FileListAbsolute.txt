@@ -1,0 +1,11 @@
+X:\Projects\Fusion.Framework\Fusion.Framework\bin\Debug\Fusion.Framework.exe
+X:\Projects\Fusion.Framework\Fusion.Framework\bin\Debug\Fusion.Framework.pdb
+X:\Projects\Fusion.Framework\Fusion.Framework\obj\x86\Debug\Fusion.Framework.exe
+X:\Projects\Fusion.Framework\Fusion.Framework\obj\x86\Debug\Fusion.Framework.pdb
+X:\Projects\Fusion.Framework\Fusion.Framework\bin\Debug\Ion.Core.dll
+X:\Projects\Fusion.Framework\Fusion.Framework\bin\Debug\Ion.Core.pdb
+X:\Projects\bin\Fusion.Framework.exe
+X:\Projects\bin\Fusion.Framework.pdb
+C:\Bin\Debug\Fusion.Framework.exe
+C:\Bin\Debug\Fusion.Framework.pdb
+X:\Projects\Fusion.Framework\Fusion.Framework\obj\x86\Debug\Fusion.Framework.csprojResolveAssemblyReference.cache

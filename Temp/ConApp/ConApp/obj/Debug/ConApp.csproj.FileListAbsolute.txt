@@ -1,0 +1,6 @@
+C:\Google Диск\Projects\Temp\ConApp\ConApp\bin\Debug\ConApp.exe.config
+C:\Google Диск\Projects\Temp\ConApp\ConApp\obj\Debug\ConApp.csprojResolveAssemblyReference.cache
+C:\Google Диск\Projects\Temp\ConApp\ConApp\bin\Debug\ConApp.exe
+C:\Google Диск\Projects\Temp\ConApp\ConApp\bin\Debug\ConApp.pdb
+C:\Google Диск\Projects\Temp\ConApp\ConApp\obj\Debug\ConApp.exe
+C:\Google Диск\Projects\Temp\ConApp\ConApp\obj\Debug\ConApp.pdb

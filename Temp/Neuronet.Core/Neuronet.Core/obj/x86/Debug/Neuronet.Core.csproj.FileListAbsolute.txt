@@ -1,0 +1,9 @@
+D:\Google Диск\Projects\Neuronet.Core\Neuronet.Core\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Google Диск\Projects\Neuronet.Core\Neuronet.Core\bin\Debug\Neuronet.Core.exe
+D:\Google Диск\Projects\Neuronet.Core\Neuronet.Core\bin\Debug\Neuronet.Core.pdb
+D:\Google Диск\Projects\Neuronet.Core\Neuronet.Core\obj\x86\Debug\Neuronet.Core.exe
+D:\Google Диск\Projects\Neuronet.Core\Neuronet.Core\obj\x86\Debug\Neuronet.Core.pdb
+D:\Google Диск\Projects\Neuronet.Core\Neuronet.Core\bin\Debug\Neuronet.Core.exe.config
+C:\Bin\Neuronet.Core.exe.config
+C:\Bin\Neuronet.Core.exe
+C:\Bin\Neuronet.Core.pdb
