@@ -1,0 +1,6 @@
+="javascript:void(window.open('http://srv-rs-03.msc.enterprise.local/ReportServer/Pages/ReportViewer.aspx?%2fReports_DUP%2fDevTasks_Assessment_Details" &
+"&rs:Command=Render" &
+IIF(Parameters!DateFrom.Value Is Nothing, "", "&DateFrom=" & Parameters!DateFrom.Value) &
+IIF(Parameters!DateTo.Value Is Nothing, "", "&DateTo=" & Parameters!DateTo.Value) &
+"&Filter=PmDirectorAcceptedTasksCount" &
+"'))"

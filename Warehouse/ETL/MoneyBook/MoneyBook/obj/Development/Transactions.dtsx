@@ -1,0 +1,1346 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/9/2014 1:26:54 AM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="ALEX"
+  DTS:CreatorName="ALEX\Alexey"
+  DTS:DTSID="{D92BD110-9050-42CA-84F0-45E28A0AA267}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.3369.0"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Transactions"
+  DTS:PackageType="5"
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{7D8A1246-4044-4235-94D4-DE070472A126}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load TransactionsFact"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{35515BC1-7862-44DF-976B-F4F0B1FD6494}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load TransactionsFact"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load TransactionsFact\MoneyBook TransactionsFact"
+              componentClassID="{8C084929-27D1-479F-9641-ABB7CDADF1AC}"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="MoneyBook TransactionsFact"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">TransactionsFact$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Connections[OleDbConnection]"
+                  connectionManagerID="{00277AE7-8B9D-44B5-AEF5-E88D00C71F5A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MoneyBook]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[Id]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[Id]"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[Direction]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[Direction]"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[Direction]"
+                      name="Direction"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[Date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[Date]"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[AccountCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[AccountCode]"
+                      length="255"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[AccountCode]"
+                      name="AccountCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[Amount]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[Amount]"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[Amount]"
+                      name="Amount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[CurrencyCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[CurrencyCode]"
+                      length="255"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[CurrencyCode]"
+                      name="CurrencyCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[BudgetGroupCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[BudgetGroupCode]"
+                      length="255"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[BudgetGroupCode]"
+                      name="BudgetGroupCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[BudgetSubgroupCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[BudgetSubgroupCode]"
+                      length="255"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[BudgetSubgroupCode]"
+                      name="BudgetSubgroupCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[BudgetItemCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[BudgetItemCode]"
+                      length="255"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[BudgetItemCode]"
+                      name="BudgetItemCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[Description]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[Description]"
+                      length="255"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[Description]"
+                      name="Description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[TotalAmount]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[TotalAmount]"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[TotalAmount]"
+                      name="TotalAmount"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[Id]"
+                      dataType="r8"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[Direction]"
+                      dataType="r8"
+                      name="Direction" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[Date]"
+                      dataType="date"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[AccountCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="AccountCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[Amount]"
+                      dataType="r8"
+                      name="Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[CurrencyCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="CurrencyCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[BudgetGroupCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="BudgetGroupCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[BudgetSubgroupCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="BudgetSubgroupCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[BudgetItemCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="BudgetItemCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[Description]"
+                      dataType="wstr"
+                      length="255"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].ExternalColumns[TotalAmount]"
+                      dataType="r8"
+                      name="TotalAmount" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[Id]"
+                      dataType="r8"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[Direction]"
+                      dataType="r8"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[Direction]"
+                      name="Direction" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[Date]"
+                      dataType="date"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[Date]"
+                      name="Date" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[AccountCode]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[AccountCode]"
+                      name="AccountCode" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[Amount]"
+                      dataType="r8"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[Amount]"
+                      name="Amount" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[CurrencyCode]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[CurrencyCode]"
+                      name="CurrencyCode" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[BudgetGroupCode]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[BudgetGroupCode]"
+                      name="BudgetGroupCode" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[BudgetSubgroupCode]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[BudgetSubgroupCode]"
+                      name="BudgetSubgroupCode" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[BudgetItemCode]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[BudgetItemCode]"
+                      name="BudgetItemCode" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[Description]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[Description]"
+                      name="Description" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[TotalAmount]"
+                      dataType="r8"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[TotalAmount]"
+                      name="TotalAmount" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load TransactionsFact\Warehouse TransactionsFact"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Warehouse TransactionsFact"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[MoneyBook].[TransactionsFact]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Connections[OleDbConnection]"
+                  connectionManagerID="{7036FF40-4412-47BF-8741-887B05F12DB8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Warehouse]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].Columns[Id]"
+                      cachedDataType="r8"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[Id]" />
+                    <inputColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].Columns[Direction]"
+                      cachedDataType="r8"
+                      cachedName="Direction"
+                      externalMetadataColumnId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[Direction]"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[Direction]" />
+                    <inputColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedDataType="date"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].Columns[AccountCode]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="AccountCode"
+                      externalMetadataColumnId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[AccountCode]"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[AccountCode]" />
+                    <inputColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].Columns[Amount]"
+                      cachedDataType="r8"
+                      cachedName="Amount"
+                      externalMetadataColumnId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[Amount]"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[Amount]" />
+                    <inputColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].Columns[CurrencyCode]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CurrencyCode"
+                      externalMetadataColumnId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyCode]"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[CurrencyCode]" />
+                    <inputColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].Columns[BudgetGroupCode]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="BudgetGroupCode"
+                      externalMetadataColumnId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[BudgetGroupCode]"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[BudgetGroupCode]" />
+                    <inputColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].Columns[BudgetSubgroupCode]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="BudgetSubgroupCode"
+                      externalMetadataColumnId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[BudgetSubgroupCode]"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[BudgetSubgroupCode]" />
+                    <inputColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].Columns[BudgetItemCode]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="BudgetItemCode"
+                      externalMetadataColumnId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[BudgetItemCode]"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[BudgetItemCode]" />
+                    <inputColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].Columns[Description]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Description"
+                      externalMetadataColumnId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      lineageId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output].Columns[Description]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      dataType="r8"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[Direction]"
+                      dataType="r8"
+                      name="Direction" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbTimeStamp"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[AccountCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="AccountCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[Amount]"
+                      dataType="r8"
+                      name="Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="CurrencyCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[BudgetGroupCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="BudgetGroupCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[BudgetSubgroupCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="BudgetSubgroupCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[BudgetItemCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="BudgetItemCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      dataType="wstr"
+                      length="255"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input].ExternalColumns[TotalAmount]"
+                      dataType="r8"
+                      name="TotalAmount" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load TransactionsFact\Warehouse TransactionsFact.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load TransactionsFact\Warehouse TransactionsFact.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load TransactionsFact\Warehouse TransactionsFact.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load TransactionsFact.Paths[Excel Source Output]"
+              endId="Package\Load TransactionsFact\Warehouse TransactionsFact.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Load TransactionsFact\MoneyBook TransactionsFact.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load TransactionsPlan"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{ce795a56-7ece-4e0b-9be9-9e61caad9d93}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load TransactionsPlan"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan"
+              componentClassID="{8C084929-27D1-479F-9641-ABB7CDADF1AC}"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="MoneyBook TransactionsPlan"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">TransactionsPlan$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Connections[OleDbConnection]"
+                  connectionManagerID="{00277AE7-8B9D-44B5-AEF5-E88D00C71F5A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MoneyBook]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[Id]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[Id]"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[Direction]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[Direction]"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[Direction]"
+                      name="Direction"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[Date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[Date]"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[AccountCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[AccountCode]"
+                      length="255"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[AccountCode]"
+                      name="AccountCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[Amount]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[Amount]"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[Amount]"
+                      name="Amount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[CurrencyCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[CurrencyCode]"
+                      length="255"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[CurrencyCode]"
+                      name="CurrencyCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[BudgetGroupCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[BudgetGroupCode]"
+                      length="255"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[BudgetGroupCode]"
+                      name="BudgetGroupCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[BudgetSubgroupCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[BudgetSubgroupCode]"
+                      length="255"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[BudgetSubgroupCode]"
+                      name="BudgetSubgroupCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[BudgetItemCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[BudgetItemCode]"
+                      length="255"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[BudgetItemCode]"
+                      name="BudgetItemCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[Description]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[Description]"
+                      length="255"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[Description]"
+                      name="Description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[TotalAmount]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[TotalAmount]"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[TotalAmount]"
+                      name="TotalAmount"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[Id]"
+                      dataType="r8"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[Direction]"
+                      dataType="r8"
+                      name="Direction" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[Date]"
+                      dataType="date"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[AccountCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="AccountCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[Amount]"
+                      dataType="r8"
+                      name="Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[CurrencyCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="CurrencyCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[BudgetGroupCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="BudgetGroupCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[BudgetSubgroupCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="BudgetSubgroupCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[BudgetItemCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="BudgetItemCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[Description]"
+                      dataType="wstr"
+                      length="255"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].ExternalColumns[TotalAmount]"
+                      dataType="r8"
+                      name="TotalAmount" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[Id]"
+                      dataType="r8"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[Direction]"
+                      dataType="r8"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[Direction]"
+                      name="Direction" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[Date]"
+                      dataType="date"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[Date]"
+                      name="Date" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[AccountCode]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[AccountCode]"
+                      name="AccountCode" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[Amount]"
+                      dataType="r8"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[Amount]"
+                      name="Amount" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[CurrencyCode]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[CurrencyCode]"
+                      name="CurrencyCode" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[BudgetGroupCode]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[BudgetGroupCode]"
+                      name="BudgetGroupCode" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[BudgetSubgroupCode]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[BudgetSubgroupCode]"
+                      name="BudgetSubgroupCode" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[BudgetItemCode]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[BudgetItemCode]"
+                      name="BudgetItemCode" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[Description]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[Description]"
+                      name="Description" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[TotalAmount]"
+                      dataType="r8"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[TotalAmount]"
+                      name="TotalAmount" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Warehouse TransactionsPlan"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[MoneyBook].[TransactionsPlan]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Connections[OleDbConnection]"
+                  connectionManagerID="{7036FF40-4412-47BF-8741-887B05F12DB8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Warehouse]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].Columns[Id]"
+                      cachedDataType="r8"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[Id]" />
+                    <inputColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].Columns[Direction]"
+                      cachedDataType="r8"
+                      cachedName="Direction"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[Direction]"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[Direction]" />
+                    <inputColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedDataType="date"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].Columns[AccountCode]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="AccountCode"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[AccountCode]"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[AccountCode]" />
+                    <inputColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].Columns[Amount]"
+                      cachedDataType="r8"
+                      cachedName="Amount"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[Amount]"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[Amount]" />
+                    <inputColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].Columns[CurrencyCode]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CurrencyCode"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyCode]"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[CurrencyCode]" />
+                    <inputColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].Columns[BudgetGroupCode]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="BudgetGroupCode"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[BudgetGroupCode]"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[BudgetGroupCode]" />
+                    <inputColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].Columns[BudgetSubgroupCode]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="BudgetSubgroupCode"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[BudgetSubgroupCode]"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[BudgetSubgroupCode]" />
+                    <inputColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].Columns[BudgetItemCode]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="BudgetItemCode"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[BudgetItemCode]"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[BudgetItemCode]" />
+                    <inputColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].Columns[Description]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Description"
+                      externalMetadataColumnId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      lineageId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output].Columns[Description]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      dataType="r8"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[Direction]"
+                      dataType="r8"
+                      name="Direction" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbTimeStamp"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[AccountCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="AccountCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[Amount]"
+                      dataType="r8"
+                      name="Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="CurrencyCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[BudgetGroupCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="BudgetGroupCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[BudgetSubgroupCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="BudgetSubgroupCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[BudgetItemCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="BudgetItemCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      dataType="wstr"
+                      length="255"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input].ExternalColumns[TotalAmount]"
+                      dataType="r8"
+                      name="TotalAmount" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load TransactionsPlan.Paths[Excel Source Output]"
+              endId="Package\Load TransactionsPlan\Warehouse TransactionsPlan.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Load TransactionsPlan\MoneyBook TransactionsPlan.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate TransactionsFact"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{595E3DC0-B1CB-49D2-926B-D1082C289854}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate TransactionsFact"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7036FF40-4412-47BF-8741-887B05F12DB8}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE MoneyBook.TransactionsFact" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate TransactionsPlan"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{44ef6c51-229d-400b-8d07-ee57f6990797}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate TransactionsPlan"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7036FF40-4412-47BF-8741-887B05F12DB8}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE MoneyBook.TransactionsPlan" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{A62C7592-4EE7-44B5-8310-92D8FE8F1AD4}"
+      DTS:From="Package\Truncate TransactionsFact"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Load TransactionsFact" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{D5A03C4C-11B0-4001-927F-FD49BD3466A2}"
+      DTS:From="Package\Truncate TransactionsPlan"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Load TransactionsPlan" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="sql11">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Load TransactionsFact"
+          TopLeft="66.25,103" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Load TransactionsPlan"
+          TopLeft="300.75,103" />
+        <NodeLayout
+          Size="207,42"
+          Id="Package\Truncate TransactionsFact"
+          TopLeft="55.25,36" />
+        <NodeLayout
+          Size="209,42"
+          Id="Package\Truncate TransactionsPlan"
+          TopLeft="294.25,36" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="158.75,78">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25"
+              Start="0,0"
+              End="0,17.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="395.75,78">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25"
+              Start="0,0"
+              End="0,17.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load TransactionsFact">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="215,42"
+          Id="Package\Load TransactionsFact\Warehouse TransactionsFact"
+          TopLeft="33,140" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\Load TransactionsFact\MoneyBook TransactionsFact"
+          TopLeft="33,37" />
+        <EdgeLayout
+          Id="Package\Load TransactionsFact.Paths[Excel Source Output]"
+          TopLeft="140.75,79">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61"
+              Start="0,0"
+              End="0,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load TransactionsFact\MoneyBook TransactionsFact">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load TransactionsFact\Warehouse TransactionsFact">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load TransactionsPlan">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="219,42"
+          Id="Package\Load TransactionsPlan\Warehouse TransactionsPlan"
+          TopLeft="39.5,130" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\Load TransactionsPlan\MoneyBook TransactionsPlan"
+          TopLeft="40.5,27" />
+        <EdgeLayout
+          Id="Package\Load TransactionsPlan.Paths[Excel Source Output]"
+          TopLeft="149,69">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61"
+              Start="0,0"
+              End="0,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load TransactionsPlan\Warehouse TransactionsPlan">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Warehouse"
+  DTS:DTSID="{7036FF40-4412-47BF-8741-887B05F12DB8}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:Retain="True"
+      DTS:ConnectionString="Data Source=SRV-TITAN-SQL\EXPRESS;User ID=olap;Initial Catalog=Warehouse;Provider=SQLNCLI11.1;Persist Security Info=True;Connect Timeout=600;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAPQaa4xdRekyaqzqyVngXFAAAAAACAAAAAAAQZgAAAAEAACAAAACutb1DdfQRQ3qwhI1HkuH7iBVq/BI/ZbNxmrZh6pKq3gAAAAAOgAAAAAIAACAAAADE6rSkQNLWRGd7UKv0O/FwqLr5gTcAJfWCLDtji8/NJYAAAAC4Ubn9rUgiIS3/M1CuG/sWWuqBvNYNsnt3qf99e0K/qRoS9CMOn5RTnLtLmJ9yp26OLR8L7evZ/jmHwwpYSYHXbWbvO8udiLozheJCbOpRzET+9gJShtUFtUBcoMbN1QC4Gk53VmWXoWXzUEsIOGzMRFV+xU2+4Op1EnjgLacBD0AAAABr8hFlI2bpqh/x0Mdw4O+s97hZwx3uX3929sM7jHlDXxX31GKbV2SjHdnz7EOgGA9JHMklhw1+C9oXlirY7pTC</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
