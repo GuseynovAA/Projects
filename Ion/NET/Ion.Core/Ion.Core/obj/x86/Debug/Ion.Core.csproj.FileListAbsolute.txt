@@ -1,0 +1,5 @@
+C:\Bin\Ion.Core.exe
+C:\Bin\Ion.Core.pdb
+C:\Users\Alex\OneDrive\Projects\Ion\NET\Ion.Core\Ion.Core\obj\x86\Debug\Ion.Core.csprojResolveAssemblyReference.cache
+C:\Users\Alex\OneDrive\Projects\Ion\NET\Ion.Core\Ion.Core\obj\x86\Debug\Ion.Core.exe
+C:\Users\Alex\OneDrive\Projects\Ion\NET\Ion.Core\Ion.Core\obj\x86\Debug\Ion.Core.pdb

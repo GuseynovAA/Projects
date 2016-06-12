@@ -11,7 +11,7 @@ namespace Ion.Core
     {
         static void Main(string[] args)
         {
-            //TestComponent test = new TestComponent();
+            TestComponent test = new TestComponent();
         }
     }
 }

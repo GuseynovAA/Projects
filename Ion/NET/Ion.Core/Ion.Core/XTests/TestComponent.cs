@@ -19,7 +19,7 @@ namespace Ion.Core.Tests
         {
             Console.WriteLine(this.Name + " begin at  " + DateTime.Now.ToString());
 
-            for (int i = 0; i < 500000000; i++)
+            for (int i = 0; i < 1000000000; i++)
             {
                 double a = i / (i * i + 1 / (i + 1) + i);
             }
@@ -34,8 +34,6 @@ namespace Ion.Core.Tests
     {
         public TestComponent()
         {
-            //ThreadPool.SetMinThreads(8, 8);
-
             PoolGenerator pg1 = new PoolGenerator("Generator1");
             PoolGenerator pg2 = new PoolGenerator("Generator2");
             PoolGenerator pg3 = new PoolGenerator("Generator3");
