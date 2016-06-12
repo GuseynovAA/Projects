@@ -1,0 +1,26 @@
+﻿USE Warehouse
+GO
+
+DECLARE @Table TABLE (G1 INT, G2 INT, G3 INT, Value FLOAT)
+
+INSERT INTO @Table VALUES (1, 1, 1, 100.0), (1, 2, 1, 120.0), (1, 2, 2, 150.0), (1, 2, 3, 140.0)
+
+SELECT
+	CALC.G1,
+	CALC.G2,
+	CALC.G3,
+	SUM(Value) [Value]
+FROM
+	@Table AS T
+
+	OUTER APPLY (
+		SELECT
+			IIF(1 = 1, T.G1, NULL) G1,
+			IIF(1 = 0, T.G2, NULL) G2,
+			IIF(1 = 1, T.G3, NULL) G3
+		) AS CALC
+GROUP BY
+	CALC.G1,
+	CALC.G2,
+	CALC.G3
+
