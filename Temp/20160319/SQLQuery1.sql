@@ -1,0 +1,49 @@
+USE Tempdb
+GO
+
+IF OBJECT_ID('Tempdb.dbo.Special_Table') IS NOT NULL
+	DROP TABLE Tempdb.dbo.Special_Table
+GO
+
+CREATE TABLE Tempdb.dbo.Special_Table (
+	Id INT IDENTITY(1,1) PRIMARY KEY NONCLUSTERED,
+	Name NVARCHAR(1000) COLLATE Latin1_General_CS_AS_KS_WS SPARSE NULL,
+	[Description] NVARCHAR(MAX) NOT NULL DEFAULT('-'),
+	Data VARBINARY(MAX) NULL,
+	[UId] UNIQUEIDENTIFIER ROWGUIDCOL DEFAULT NEWSEQUENTIALID(),
+	[Version] ROWVERSION,
+	ParentId INT FOREIGN KEY REFERENCES Tempdb.dbo.Special_Table(Id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+	CalcValue AS (Id / 0.87) UNIQUE
+)
+TEXTIMAGE_ON [PRIMARY]
+WITH (
+	DATA_COMPRESSION = NONE
+)
+GO
+
+INSERT INTO Tempdb.dbo.Special_Table DEFAULT VALUES
+GO
+
+SET IDENTITY_INSERT Tempdb.dbo.Special_Table ON
+GO
+
+INSERT INTO Tempdb.dbo.Special_Table (Id, Name) VALUES(5, 'Name')
+GO
+
+SET IDENTITY_INSERT Tempdb.dbo.Special_Table OFF
+GO
+
+INSERT INTO Tempdb.dbo.Special_Table DEFAULT VALUES
+GO
+
+SELECT * FROM Tempdb.dbo.Special_Table
+GO
+
+UPDATE Tempdb.dbo.Special_Table SET
+	ParentId = 1
+WHERE
+	Id <> 1
+GO
+
+SELECT * FROM Tempdb.dbo.Special_Table
+--GO

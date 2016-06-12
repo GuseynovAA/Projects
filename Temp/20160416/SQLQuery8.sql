@@ -1,0 +1,1 @@
+select StoreId, count(ResourceId) from dbo.StoresResources group by StoreId
